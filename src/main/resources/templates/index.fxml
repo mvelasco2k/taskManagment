@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="427.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gm.task.controller.IndexController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="34.0" text="SISTEMA DE TAREAS" textAlignment="CENTER" textFill="#cd1313">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></Label>
+      <TableView fx:id="taskTable" layoutX="181.0" layoutY="100.0" onMouseClicked="#loadSelectedTaskForm" prefHeight="194.0" prefWidth="449.0">
+        <columns>
+          <TableColumn fx:id="idTaskColumn" prefWidth="41.0" text="Id" />
+          <TableColumn fx:id="nameTaskColumn" prefWidth="213.0" text="Tarea" />
+            <TableColumn fx:id="responsableTaskColumn" prefWidth="99.0" text="Responsable" />
+            <TableColumn fx:id="statusTaskColumn" prefWidth="95.0" text="Estatus" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="14.0" layoutY="97.0" prefHeight="200.0" prefWidth="159.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Tarea" textFill="#2a78bc">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="13.0" layoutY="70.0" text="Responsable" textFill="#2a78bc">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="15.0" layoutY="131.0" text="Estatus" textFill="#2a78bc">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="taskTextField" layoutX="8.0" layoutY="31.0" prefHeight="25.0" prefWidth="140.0" />
+            <TextField fx:id="responsableTextField" layoutX="8.0" layoutY="88.0" prefHeight="25.0" prefWidth="140.0" />
+            <TextField fx:id="statusTextField" layoutX="8.0" layoutY="148.0" prefHeight="25.0" prefWidth="140.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="309.0" prefHeight="105.0" prefWidth="616.0">
+         <children>
+            <Button fx:id="addTaskBtn" layoutX="55.0" layoutY="40.0" mnemonicParsing="false" onAction="#addTask" prefHeight="36.0" prefWidth="88.0" style="-fx-background-color: #1D3557;" text="AGREGAR" textFill="#f1faee" />
+            <Button fx:id="modifyBtn" layoutX="194.0" layoutY="40.0" mnemonicParsing="false" onAction="#updateTask" prefHeight="36.0" prefWidth="88.0" style="-fx-background-color: #1D3557;" text="MODIFICAR" textFill="#f1faee" />
+            <Button fx:id="deleteBtn" layoutX="338.0" layoutY="40.0" mnemonicParsing="false" onAction="#deleteTask" prefHeight="36.0" prefWidth="88.0" style="-fx-background-color: #E63946;" text="ELIMINAR" textFill="#f1faee" />
+            <Button fx:id="cleanBtn" layoutX="473.0" layoutY="40.0" mnemonicParsing="false" onAction="#cleanForm" prefHeight="36.0" prefWidth="109.0" style="-fx-background-color: #FFD60A;" text="LIMPIAR FORMA" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
